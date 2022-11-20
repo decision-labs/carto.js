@@ -28,7 +28,13 @@ var GoogleMapsMapView = MapView.extend({
       backgroundColor: 'white',
       tilt: 0,
       streetViewControl: true,
-      rotateControl: true
+      streetViewControlOptions: {
+        position: google.maps.ControlPosition.TOP_RIGHT
+      },
+      rotateControl: true,
+      rotateControlOptions: {
+        position: google.maps.ControlPosition.TOP_RIGHT
+      },
     });
 
     this._gmapStreetView = this._gmapsMap.getStreetView();
