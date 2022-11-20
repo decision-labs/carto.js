@@ -26,7 +26,16 @@ var GoogleMapsMapView = MapView.extend({
       mapTypeControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       backgroundColor: 'white',
-      tilt: 0
+      tilt: 0,
+      streetViewControl: true,
+      rotateControl: true
+    });
+
+    this._gmapStreetView = this._gmapsMap.getStreetView();
+    this._gmapStreetView.setOptions({
+      addressControlOptions: {
+        position: google.maps.ControlPosition.BOTTOM_CENTER,
+      },
     });
 
     this.map.bind('change:maxZoom', function () {
