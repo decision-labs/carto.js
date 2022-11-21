@@ -40,7 +40,7 @@ var GoogleMapsMapView = MapView.extend({
     this._gmapStreetView = this._gmapsMap.getStreetView();
     this._gmapStreetView.setOptions({
       addressControlOptions: {
-        position: google.maps.ControlPosition.BOTTOM_CENTER,
+        position: google.maps.ControlPosition.TOP_RIGHT,
       },
     });
 
