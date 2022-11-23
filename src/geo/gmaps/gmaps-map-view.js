@@ -39,6 +39,7 @@ var GoogleMapsMapView = MapView.extend({
 
     this._gmapStreetView = this._gmapsMap.getStreetView();
     this._gmapStreetView.setOptions({
+      imageDateControl: true,
       addressControlOptions: {
         position: google.maps.ControlPosition.TOP_RIGHT,
       },
